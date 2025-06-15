@@ -18,7 +18,8 @@ app = FastAPI(
 # Konfigurasi CORS
 origins = [
     "http://localhost:3000",
-    #"https://frontend-domain.com",
+    "https://*.run.app",  # Allow Cloud Run domains
+    "*"  # Allow all origins for production (you can restrict this later)
 ]
 
 app.add_middleware(
