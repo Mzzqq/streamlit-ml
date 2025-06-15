@@ -1,0 +1,66 @@
+# Git files
+.git
+.gitignore
+
+# Python cache
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env
+pip-log.txt
+pip-delete-this-directory.txt
+.tox
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.git
+.mypy_cache
+.pytest_cache
+.hypothesis
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Documentation
+*.md
+docs/
+
+# Large data files (exclude most, but keep essential model files)
+*.xlsx
+
+# Don't exclude model files - they're needed for the app
+# *.pkl - commented out to include model files
+# backend/model_files/*.pkl - commented out to include model files
+# backend/*.npy - commented out to include training data
+# backend/*.png - commented out to include visualization files
+
+# Exclude large CSV files but keep train.csv if needed
+# *.csv - commented out, may need train.csv 
