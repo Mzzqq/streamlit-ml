@@ -16,8 +16,11 @@ COPY backend/ .
 # Create necessary directories if they don't exist
 RUN mkdir -p model_files
 
+# Expose port 8000 for FastAPI
+EXPOSE 8080
+
 # Change to the app directory
 WORKDIR /app/app
 
 # Run the FastAPI application with uvicorn
-CMD ["fastapi", "run", "app/main.py"]
+CMD ["fastapi", "run", "app/main.py", "--port", "8080"]
