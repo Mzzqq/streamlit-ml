@@ -454,10 +454,10 @@ def load_data():
 def load_model_and_preprocessor():
     """Load trained model and preprocessor"""
     try:
-        model = joblib.load('best_model.pkl')
-        preprocessor = joblib.load('preprocessor.pkl')
-        label_encoder = joblib.load('label_encoder.pkl')
-        model_info = joblib.load('model_info.pkl')
+        model = joblib.load('model_files/best_model.pkl')
+        preprocessor = joblib.load('model_files/preprocessor.pkl')
+        label_encoder = joblib.load('model_files/label_encoder.pkl')
+        model_info = joblib.load('model_files/model_info.pkl')
         return model, preprocessor, label_encoder, model_info
     except FileNotFoundError as e:
         st.error(f"Model files tidak ditemukan: {e}")
