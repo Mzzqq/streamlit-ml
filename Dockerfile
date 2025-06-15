@@ -33,4 +33,4 @@ ENV PYTHONUNBUFFERED=1
 WORKDIR /app/app
 
 # Run the FastAPI application with uvicorn
-CMD ["fastapi", "run", "app/main.py", "--port", "80"]
+CMD ["fastapi", "run", "app/main.py", "--port", "8080"]
