@@ -4,12 +4,6 @@ FROM python:3.11-slim
 # Set working directory in container
 WORKDIR /app
 
-# Install system dependencies
-RUN apt-get update && apt-get install -y \
-    gcc \
-    g++ \
-    && rm -rf /var/lib/apt/lists/*
-
 # Copy requirements file
 COPY requirements.txt .
 
@@ -24,10 +18,6 @@ RUN mkdir -p model_files
 
 # Expose port 8000 for FastAPI
 EXPOSE 8000
-
-# Set environment variables
-ENV PYTHONPATH=/app
-ENV PYTHONUNBUFFERED=1
 
 # Change to the app directory
 WORKDIR /app/app
